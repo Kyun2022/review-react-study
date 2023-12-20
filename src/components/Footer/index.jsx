@@ -1,5 +1,5 @@
 // Style Import
-import classes from "./Footer.module.css";
+import classes from "src/components/Footer/Footer.module.css";
 // Components Imports
 import Image from "next/image";
 // Library Imports

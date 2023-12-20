@@ -1,12 +1,12 @@
 // Styles Import
-import classes from "./Main.module.css";
+import classes from "src/components/Main/Main.module.css";
 // Library Imports
 import React from "react";
 // Components Imports
-import { Links } from "../Links/Links";
-import { PageTitle } from "../PageTitle/PageTitle";
-import { Footer } from "../Footer/Footer";
-import { HeadLine } from "../HeadLine/HeadLine";
+import { Links } from "src/components/Links";
+import { PageTitle } from "src/components/PageTitle";
+import { Footer } from "src/components/Footer";
+import { HeadLine } from "src/components/HeadLine";
 
 export const Main = (props) => {
   return (

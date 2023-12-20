@@ -1,6 +1,6 @@
 // Style Import
 import Link from "next/link";
-import classes from "./Links.module.css";
+import classes from "src/components/Links/Links.module.css";
 
 const ITEMS = [
   {

@@ -1,5 +1,5 @@
 // Style Import
-import classes from "./PageTitle.module.css";
+import classes from "src/components/PageTitle/PageTitle.module.css";
 // Library Imports
 import React from "react";
 
