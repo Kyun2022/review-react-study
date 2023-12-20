@@ -1,7 +1,8 @@
-// style import
+// Style Import
 import styles from "@/styles/Home.module.css";
-// components imports
+// Components Imports
 import Image from "next/image";
+// Library Imports
 import React from "react";
 
 export const Footer = () => {

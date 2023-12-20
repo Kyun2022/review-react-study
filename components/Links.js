@@ -1,6 +1,5 @@
-// style import
+// Style Import
 import styles from "@/styles/Home.module.css";
-// components imports
 
 export const Links = () => {
   return (
