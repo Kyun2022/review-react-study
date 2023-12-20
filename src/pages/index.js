@@ -1,6 +1,6 @@
 // Components Imports
 import Head from "next/head";
-import { Main } from "../../components/Main";
+import { Main } from "../../components/Main/Main";
 
 const Home = (props) => {
   return (
@@ -12,7 +12,7 @@ const Home = (props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Main page="index" title="Index"/>
+      <Main page="index" title="Index" />
     </div>
   );
 };

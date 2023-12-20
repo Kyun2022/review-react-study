@@ -1,6 +1,6 @@
 // Components Imports
 import Head from "next/head";
-import { Main } from "../../components/Main";
+import { Main } from "../../components/Main/Main";
 
 const about = (props) => {
   return (
