@@ -107,11 +107,21 @@ a {
 }
 
 .block {
-  width: 100%;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 button {
   margin-top: 1rem;
   display: inline-block;
+}
+
+input {
+  margin-top: 1rem;
+}
+
+h1 {
+  text-align: center;
 }
