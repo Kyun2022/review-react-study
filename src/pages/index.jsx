@@ -6,15 +6,15 @@ import { useEffect, useState } from "react";
 const Home = (props) => {
   const [count, setCount] = useState(1);
 
-  const handleClick = (e) => {
-    setCount((count) => ++count);
-    setCount((count) => ++count);
+  const handleClick = () => {
+    if (count < 10) {
+      setCount((count) => ++count);
+    }
   };
 
   useEffect(() => {
     document.body.style.backgroundColor = "lightblue";
 
-    console.log("🚀 ~ ", count);
     return () => {
       document.body.style.backgroundColor = "";
     };
