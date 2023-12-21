@@ -1,28 +1,32 @@
 // Components Imports
 import { Main } from "src/components/Main";
 import { Header } from "src/components/Header";
-import { useCallback, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Home = (props) => {
-  const handleClick = useCallback((e) => {
-    alert("kyun");
-  }, []);
+  const [count, setCount] = useState(1);
+
+  const handleClick = (e) => {
+    setCount((count) => ++count);
+    setCount((count) => ++count);
+  };
 
   useEffect(() => {
-    console.log("🚀 ~ 確認", "マウント時");
     document.body.style.backgroundColor = "lightblue";
 
+    console.log("🚀 ~ ", count);
     return () => {
-      console.log("🚀 ~ 確認", "アンマウント時");
-
       document.body.style.backgroundColor = "";
     };
   }, []);
 
   return (
-    <div>
+    <div className="block">
       <Header />
-      <button onClick={handleClick}>ボタン</button>
+      <h1>{count}</h1>
+      <button className="button" onClick={handleClick}>
+        ボタン
+      </button>
       <Main page="index" title="Index" />
     </div>
   );
