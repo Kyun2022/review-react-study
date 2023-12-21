@@ -7,10 +7,11 @@ const Home = (props) => {
   const [text, setText] = useState("");
   const [count, setCount] = useState(1);
   const [isShow, setIsShow] = useState(false);
+  const [array, setArray] = useState([]);
 
   const handleClick = useCallback(() => {
     if (count < 10) {
-      setCount((count) => ++count);
+      setCount((prevCount) => ++prevCount);
     }
   }, [count]);
 
