@@ -23,7 +23,20 @@ const Home = (props) => {
     setText(e.target.value.trim());
   }, []);
 
-  const handleDisplay = useCallback(() => setIsShow((isShow) => !isShow), []);
+  const handleDisplay = useCallback(
+    () => setIsShow((prevIsShow) => !prevIsShow),
+    []
+  );
+
+  const handleAdd = useCallback(() => {
+    setArray((prevArray) => {
+      if (prevArray.some((item) => item === text)) {
+        alert("同じ要素がすでに存在します👿");
+        return prevArray;
+      }
+      return [...prevArray, text];
+    });
+  }, [text]);
 
   useEffect(() => {
     document.body.style.backgroundColor = "lightblue";
@@ -45,9 +58,14 @@ const Home = (props) => {
             </button>
           </div>
         ) : null}
-
         <button onClick={handleDisplay}>{isShow ? "非表示" : "表示"}</button>
         <input type="text" value={text} onChange={handleChange} />
+        <button onClick={handleAdd}>追加</button>
+        <ul>
+          {array.map((item) => {
+            return <li key={item}>{item}</li>;
+          })}
+        </ul>
       </div>
       <Main page="index" title="Index" />
     </div>
