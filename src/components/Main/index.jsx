@@ -1,7 +1,7 @@
 // Styles Import
 import classes from "src/components/Main/Main.module.css";
 // Library Imports
-import React from "react";
+import React, { useEffect } from "react";
 // Components Imports
 import { Links } from "src/components/Links";
 import { PageTitle } from "src/components/PageTitle";
