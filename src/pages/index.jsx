@@ -1,18 +1,23 @@
 // Components Imports
 import { Main } from "src/components/Main";
 import { Header } from "src/components/Header";
-// Utils Imports
-import { useCounter } from "src/hooks/useCounter";
-import { useInputArray } from "src/hooks/useInputArray";
-import { useBgLightBlue } from "src/hooks/useBgLightBlue";
+// Library Imports
+import React from "react";
 
 const Home = (props) => {
-  const { count, isShow, handleClick, handleDisplay } = useCounter();
-  const { text, array, handleChange, handleAdd } = useInputArray();
-  useBgLightBlue();
+  const {
+    count,
+    isShow,
+    handleClick,
+    handleDisplay,
+    text,
+    array,
+    handleChange,
+    handleAdd,
+  } = props;
 
   return (
-    <div>
+    <>
       <Header />
       <div className="block">
         {isShow ? (
@@ -33,7 +38,7 @@ const Home = (props) => {
         </ul>
       </div>
       <Main page="index" title="Index" />
-    </div>
+    </>
   );
 };
 

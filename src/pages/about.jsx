@@ -1,18 +1,23 @@
 // Components Imports
 import { Main } from "src/components/Main";
 import { Header } from "src/components/Header";
-// Utils Imports
-import { useCounter } from "src/hooks/useCounter";
-import { useInputArray } from "src/hooks/useInputArray";
-import { useBgLightBlue } from "src/hooks/useBgLightBlue";
+// Library Imports
+import React from "react";
 
 const about = (props) => {
-  const { count, isShow, handleClick, handleDisplay } = useCounter();
-  const { text, array, handleChange, handleAdd } = useInputArray();
-  useBgLightBlue();
+  const {
+    count,
+    isShow,
+    handleClick,
+    handleDisplay,
+    text,
+    array,
+    handleChange,
+    handleAdd,
+  } = props;
 
   return (
-    <div>
+    <>
       <Header />
       <div className="block">
         {isShow ? (
@@ -23,9 +28,13 @@ const about = (props) => {
             </button>
           </div>
         ) : null}
+
         <button onClick={handleDisplay}>{isShow ? "非表示" : "表示"}</button>
+
         <input type="text" value={text} onChange={handleChange} />
+
         <button onClick={handleAdd}>追加</button>
+
         <ul>
           {array.map((item) => {
             return <li key={item}>{item}</li>;
@@ -33,7 +42,7 @@ const about = (props) => {
         </ul>
       </div>
       <Main page="about" title="About" />
-    </div>
+    </>
   );
 };
 
