@@ -3,14 +3,14 @@ import "src/styles/globals.css";
 // Library Imports
 import Head from "next/head";
 // Utils Imports
-import { useBgLightBlue } from "src/hooks/useBgLightBlue";
+import { useBgColor } from "src/hooks/useBgColor";
 import { useCounter } from "src/hooks/useCounter";
 import { useInputArray } from "src/hooks/useInputArray";
 
 const App = ({ Component, pageProps }) => {
   const counter = useCounter();
   const inputArray = useInputArray();
-  useBgLightBlue();
+  useBgColor();
 
   return (
     <>
