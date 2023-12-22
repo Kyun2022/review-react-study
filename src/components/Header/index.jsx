@@ -3,25 +3,27 @@ import classes from "src/components/Header/Header.module.css";
 import Link from "next/link";
 import React from "react";
 
+const NAV_ITEMS = [
+  {
+    href: "/",
+    label: "Index",
+  },
+  {
+    href: "/about",
+    label: "About",
+  },
+];
+
 export const Header = () => {
   return (
     <header className={classes.header}>
-      <Link
-        href={{
-          pathname: "/",
-        }}
-        className={classes.anchor}
-      >
-        Index
-      </Link>
-      <Link
-        href={{
-          pathname: "/about",
-        }}
-        className={classes.anchor}
-      >
-        About
-      </Link>
+      {NAV_ITEMS.map((item) => {
+        return (
+          <Link key={item.href} href={item.href} className={classes.anchor}>
+            {item.label}
+          </Link>
+        );
+      })}
     </header>
   );
 };
