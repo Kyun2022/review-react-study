@@ -6,8 +6,8 @@ import React from "react";
 
 const about = (props) => {
   const {
-    count,
     isShow,
+    doubleCount,
     handleClick,
     handleDisplay,
     text,
@@ -22,7 +22,7 @@ const about = (props) => {
       <div className="block">
         {isShow ? (
           <div>
-            <h1 className="center">{count}</h1>
+            <h1 className="center">{doubleCount}</h1>
             <button className="button" onClick={handleClick}>
               ボタン
             </button>
