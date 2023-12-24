@@ -32,7 +32,7 @@ export const Posts = () => {
 
   const getPosts = useCallback(async () => {
     try {
-      const res = await fetch("https://jsonplaceholder.typicode.com/postsa");
+      const res = await fetch("https://jsonplaceholder.typicode.com/posts");
       if (!res.ok) {
         throw new Error("Failed to retrieve data because an error occurred");
       }
@@ -67,7 +67,7 @@ export const Posts = () => {
     <>
       <div className="block">
         <ol className="list-decimal">
-          {state.posts.map((post) => {
+          {state.data.map((post) => {
             return <li key={post.id}>{post.title}</li>;
           })}
         </ol>
