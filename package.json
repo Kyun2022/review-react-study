@@ -10,9 +10,10 @@
   },
   "dependencies": {
     "@babel/preset-react": "^7.23.3",
-    "next": "14.0.4",
+    "next": "^14.0.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18.2.0",
+    "typescript": "^5.3.3"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
