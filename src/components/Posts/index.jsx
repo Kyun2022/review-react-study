@@ -5,26 +5,26 @@ export const Posts = () => {
   const { data, error, isLoading, isEmpty } = usePosts();
 
   if (isLoading) {
-    return <div className="">Loading...</div>;
+    return <div>ローディング中</div>;
   }
+
   if (error) {
-    return <div className="">{error.message}</div>;
+    return <div>{error.message}</div>;
   }
-  if (isEmpty || !data) {
-    return <div className="">No data...</div>;
+
+  if (isEmpty) {
+    return <div>データは空です</div>;
   }
 
   return (
-    <>
-      <div className="max-w-screen-md mx-auto">
-        <ol className="list-decimal">
-          {data.map((post) => (
-            <li key={post.id}>
-              <Link href={`/post/${post.id}`}>{post.title}</Link>
-            </li>
-          ))}
-        </ol>
-      </div>
-    </>
+    <ol>
+      {data.map((post) => {
+        return (
+          <li key={post.id}>
+            <Link href={`/posts/${post.id}`}>{post.title}</Link>
+          </li>
+        );
+      })}
+    </ol>
   );
 };

@@ -1,19 +1,16 @@
-// Styles Import
-import classes from "src/components/Header/Header.module.css";
 import Link from "next/link";
-import React from "react";
+import classes from "src/components/Header/Header.module.css";
 
 const NAV_ITEMS = [
-  {
-    href: "/",
-    label: "Index",
-  },
-  {
-    href: "/about",
-    label: "About",
-  },
+  { href: "/", label: "Index" },
+  { href: "/posts", label: "Posts" },
+  { href: "/users", label: "Users" },
+  { href: "/comments", label: "Comments" },
 ];
 
+const get = () => {
+  console.log(get);
+};
 export const Header = () => {
   return (
     <header className={classes.header}>

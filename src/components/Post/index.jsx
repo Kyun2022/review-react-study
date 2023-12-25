@@ -1,22 +1,25 @@
+import Head from "next/head";
 import { usePost } from "src/hooks/usePost";
 
 export const Post = () => {
   const { post, user, error, isLoading } = usePost();
 
   if (isLoading) {
-    return <div className="">Loading...</div>;
+    return <div>ローディング中</div>;
   }
+
   if (error) {
-    return <div className="">{error.message}</div>;
+    return <div>{error.message}</div>;
   }
 
   return (
-    <>
-      <div className="max-w-screen-md mx-auto ">
-        <h1 className="text-start">{post?.title}</h1>
-        <p>{post?.body}</p>
-        {user?.name ? <p>Created by {user.name}</p> : null}
-      </div>
-    </>
+    <div>
+      <Head>
+        <title>{post?.title}</title>
+      </Head>
+      <h1>{post?.title}</h1>
+      <p>{post?.body}</p>
+      {user?.name ? <div>Created by {user.name}</div> : null}
+    </div>
   );
 };

@@ -1,16 +1,17 @@
-// Components Imports
+import Head from "next/head";
 import { Header } from "src/components/Header";
-// Library Imports
-import React from "react";
-import { Posts } from "src/components/Posts";
 
-const Home = () => {
+const Index = () => {
   return (
-    <div className="max-w-screen-md mx-auto">
+    <div>
+      <Head>
+        <title>Index Page</title>
+      </Head>
       <Header />
-      <Posts />
+      <h1>Next.jsで学ぶReact講座</h1>
+      <p>JSONPlaceholderのAPIを色々叩いてみるよ！</p>
     </div>
   );
 };
 
-export default Home;
+export default Index;

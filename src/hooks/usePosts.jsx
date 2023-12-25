@@ -1,4 +1,3 @@
-// Library Imports
 import { fetcher } from "src/utils/fetcher";
 import useSWR from "swr";
 
@@ -10,7 +9,7 @@ export const usePosts = () => {
   return {
     data,
     error,
-    idLoading: !error && !data,
+    isLoading: !error && !data,
     isEmpty: data && data.length === 0,
   };
 };
