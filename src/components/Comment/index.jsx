@@ -1,4 +1,4 @@
-const { useComment } = require("src/hooks/useComment");
+import { useComment } from "src/hooks/useComment";
 
 export const CommentComponent = () => {
   const { data, error, isLoading } = useComment();
