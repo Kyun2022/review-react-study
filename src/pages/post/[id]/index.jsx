@@ -1,17 +1,18 @@
 // Components Imports
 import { Header } from "src/components/Header";
+import { usePost } from "src/hooks/usePost";
 // Library Imports
 import React from "react";
-import { useRouter } from "next/router";
+import { Post } from "src/components/Post";
 
 const PostId = () => {
-  const router = useRouter();
+  const { post, user, error, isLoading } = usePost();
 
   return (
-    <>
+    <div className="max-w-screen-md mx-auto">
       <Header />
-      <div className="block">{router.query.id}</div>
-    </>
+      <Post />
+    </div>
   );
 };
 

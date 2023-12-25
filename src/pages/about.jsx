@@ -17,7 +17,7 @@ const about = (props) => {
   } = props;
 
   return (
-    <>
+    <div className="max-w-screen-md mx-auto">
       <Header />
       <div className="block">
         {isShow ? (
@@ -42,7 +42,7 @@ const about = (props) => {
         </ul>
       </div>
       <Main page="about" title="About" />
-    </>
+    </div>
   );
 };
 

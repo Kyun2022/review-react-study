@@ -4,7 +4,7 @@ import classes from "src/components/Links/Links.module.css";
 
 export const Links = ({ items, handleReduce }) => {
   return (
-    <div className="">
+    <div>
       <div className={classes.grid}>
         {items.map((item) => {
           return (

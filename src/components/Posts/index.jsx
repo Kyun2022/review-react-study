@@ -16,7 +16,7 @@ export const Posts = () => {
 
   return (
     <>
-      <div className="block">
+      <div className="max-w-screen-md mx-auto">
         <ol className="list-decimal">
           {data.map((post) => (
             <li key={post.id}>

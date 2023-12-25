@@ -6,10 +6,10 @@ import { Posts } from "src/components/Posts";
 
 const Home = () => {
   return (
-    <>
+    <div className="max-w-screen-md mx-auto">
       <Header />
       <Posts />
-    </>
+    </div>
   );
 };
 
