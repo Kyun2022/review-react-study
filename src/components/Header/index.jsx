@@ -8,9 +8,6 @@ const NAV_ITEMS = [
   { href: "/comments", label: "Comments" },
 ];
 
-const get = () => {
-  console.log(get);
-};
 export const Header = () => {
   return (
     <header className={classes.header}>

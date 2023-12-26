@@ -15,6 +15,7 @@ export const UsersComponent = () => {
   if (isEmpty) {
     return <p>No users found.</p>;
   }
+
   return (
     <ol>
       {data.map((user) => {

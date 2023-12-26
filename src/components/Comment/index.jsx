@@ -4,11 +4,11 @@ export const CommentComponent = () => {
   const { data, error, isLoading } = useComment();
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return <div>Loading...</div>;
   }
 
   if (error) {
-    return <p>{error.message}</p>;
+    return <div>{error.message}</div>;
   }
 
   return (

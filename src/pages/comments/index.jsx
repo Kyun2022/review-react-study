@@ -6,7 +6,7 @@ const Comments = () => {
   return (
     <div>
       <Head>
-        <title>Users Page</title>
+        <title>Comments Page</title>
       </Head>
       <Header />
       <CommentsComponent />

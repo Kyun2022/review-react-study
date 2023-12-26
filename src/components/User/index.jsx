@@ -2,12 +2,13 @@ import { useUser } from "src/hooks/useUser";
 
 export const UserComponent = () => {
   const { data, error, isLoading } = useUser();
+
   if (isLoading) {
-    return <p>Loading...</p>;
+    return <div>Loading...</div>;
   }
 
   if (error) {
-    return <p>{error.message}</p>;
+    return <div>{error.message}</div>;
   }
 
   return (
