@@ -14,7 +14,7 @@ export const CommentComponent = () => {
 
   return (
     <div>
-      <div className="text-lg">
+      <div className="text-lg mt-4">
         {data.name} ({data.email})
       </div>
       <h1 className="text-3xl font-bold">{data.body}</h1>
