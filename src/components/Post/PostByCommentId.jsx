@@ -5,7 +5,7 @@ export const PostByCommentId = (props) => {
   const { data, error, isLoading } = usePost(props.id);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div>ローディング中</div>;
   }
 
   if (error) {
@@ -13,8 +13,8 @@ export const PostByCommentId = (props) => {
   }
 
   return (
-    <Link href={`/posts/${data.id}`} className="text-lg  hover:text-blue-500">
-      {data?.title}
+    <Link href={`/posts/${data?.id}`}>
+      <a className="text-lg hover:text-blue-500">{data?.title}</a>
     </Link>
   );
 };

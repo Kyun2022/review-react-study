@@ -19,8 +19,9 @@ export const getServerSideProps = async () => {
 
 const Users = (props) => {
   const { fallback } = props;
+
   return (
-    <div className="">
+    <div>
       <Head>
         <title>Users Page</title>
       </Head>
