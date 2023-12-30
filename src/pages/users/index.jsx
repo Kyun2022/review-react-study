@@ -3,16 +3,15 @@ import { Header } from "src/components/Header";
 import { UsersComponent } from "src/components/Users";
 import { SWRConfig } from "swr";
 
-export const getServerSideProps = async (ctx) => {
-  const { id } = ctx.query;
-  const API_URL = `https://jsonplaceholder.typicode.com/users/${id}`;
-  const user = await fetch(API_URL);
-  const userData = await user.json();
+export const getServerSideProps = async () => {
+  const USERS_API_URL = `https://jsonplaceholder.typicode.com/users`;
+  const users = await fetch(USERS_API_URL);
+  const usersData = await users.json();
 
   return {
     props: {
       fallback: {
-        [API_URL]: userData,
+        [USERS_API_URL]: usersData,
       },
     },
   };
@@ -20,15 +19,16 @@ export const getServerSideProps = async (ctx) => {
 
 const Users = (props) => {
   const { fallback } = props;
-
   return (
-    <SWRConfig value={{ fallback }}>
+    <div className="">
       <Head>
         <title>Users Page</title>
       </Head>
-      <Header />
-      <UsersComponent />
-    </SWRConfig>
+      <SWRConfig value={{ fallback }}>
+        <Header />
+        <UsersComponent />
+      </SWRConfig>
+    </div>
   );
 };
 
